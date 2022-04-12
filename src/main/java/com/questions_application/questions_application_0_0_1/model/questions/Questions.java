@@ -1,12 +1,18 @@
 package com.questions_application.questions_application_0_0_1.model.questions;
 
-import com.questions_application.questions_application_0_0_1.model.form.Form;
 import com.questions_application.questions_application_0_0_1.model.categories.Categories;
+import com.questions_application.questions_application_0_0_1.model.form.Form;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 
 @Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "T_QUESTIONS" , schema = "DEV")
 public class Questions {
