@@ -1,21 +1,20 @@
-package com.questions_application.questions_application_0_0_1.rest.impl;
+package com.questions_application.questions_application_0_0_1.rest.questions.impl;
 
-import com.questions_application.questions_application_0_0_1.model.questions.Questions;
-import com.questions_application.questions_application_0_0_1.rest.PersonalityTestRestController;
-import com.questions_application.questions_application_0_0_1.mapper.questions.QuestionsMapper;
 import com.questions_application.questions_application_0_0_1.dto.QuestionsDTO;
+import com.questions_application.questions_application_0_0_1.mapper.questions.QuestionsMapper;
+import com.questions_application.questions_application_0_0_1.model.questions.Questions;
+import com.questions_application.questions_application_0_0_1.rest.questions.QuestionsController;
 import com.questions_application.questions_application_0_0_1.service.questions.QuestionsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.CollectionUtils;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collections;
 import java.util.List;
 
-
 @RestController
-@RequestMapping("/")
-public class PersonalityTestRestControllerImpl implements PersonalityTestRestController {
+@RequestMapping("/questions")
+public class QuestionsControllerImpl implements QuestionsController {
+
 
     @Autowired
     QuestionsService questionsService;
@@ -24,8 +23,8 @@ public class PersonalityTestRestControllerImpl implements PersonalityTestRestCon
     QuestionsMapper mapper;
 
     @Override
-    @GetMapping("/getQuestions")
-    public List<QuestionsDTO> getQuestions() {
+    @GetMapping("/getAllQuestionsByFormId")
+    public List<QuestionsDTO> getAllQuestionsByFormId(@RequestParam Integer id ) {
         List<QuestionsDTO> questionsDTOList = null;
 
         List<Questions> response = questionsService.getAllQuestions();
