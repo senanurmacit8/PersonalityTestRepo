@@ -1,4 +1,4 @@
-package com.questions_application.questions_application_0_0_1.service.dto;
+package com.questions_application.questions_application_0_0_1.dto;
 
 import lombok.Data;
 

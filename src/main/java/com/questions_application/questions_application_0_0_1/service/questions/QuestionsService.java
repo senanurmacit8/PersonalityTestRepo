@@ -1,17 +1,16 @@
 package com.questions_application.questions_application_0_0_1.service.questions;
 
-import com.questions_application.questions_application_0_0_1.model.questions.Quesitons;
-import com.questions_application.questions_application_0_0_1.service.dto.QuestionsDTO;
+import com.questions_application.questions_application_0_0_1.model.questions.Questions;
 
 import java.util.List;
 
 public interface QuestionsService {
 
-     List<Quesitons> getAllQuestions();
+     List<Questions> getAllQuestions();
 
-     QuestionsDTO getConditionalQuestions(Long questionId);
+     Questions getConditionalQuestions(Integer questionId);
 
-     void saveAll(List<QuestionsDTO> questionsDTOList);
+     void saveAll(List<Questions> questionsDTOList);
 
 }
 

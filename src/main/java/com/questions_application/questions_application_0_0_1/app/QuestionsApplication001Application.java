@@ -11,7 +11,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories(basePackages="com.questions_application.questions_application_0_0_1.repository")
 @EntityScan(basePackages="com.questions_application.questions_application_0_0_1.model")
 @SpringBootApplication(scanBasePackages = {"com.questions_application.questions_application_0_0_1.app",
-		"com.questions_application.questions_application_0_0_1.controller"})
+		"com.questions_application.questions_application_0_0_1.rest"})
 
 public class QuestionsApplication001Application extends SpringBootServletInitializer {
 
